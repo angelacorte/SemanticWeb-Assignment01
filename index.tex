@@ -1,0 +1,45 @@
+\documentclass[12pt,a4paper,openright]{report}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{makeidx}
+\usepackage{listings}
+\usepackage[square,numbers,sort]{natbib} 
+
+\title{\LARGE
+    TODO \\ \small TODO
+}
+
+% Consider watching:
+% https://www.youtube.com/watch?v=ihxSUsJB_14
+% https://www.youtube.com/watch?v=XTFWaV55uDo
+
+\author{
+    Angela Cortecchia \\ \emailaddr{angela.cortecchia@studio.unibo.it}
+    \and 
+    Eddie Barzi \\ \emailaddr{eddie.barzi@studio.unibo.it} 
+}
+
+\date{\small Anno Accademico 2021-2022}
+\makeindex
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\input{chapters/chap01.tex}
+
+\input{chapters/chap02.tex}
+
+\input{chapters/chap03.tex}
+
+\input{chapters/chap04.tex}
+
+\bibliography{bibliography}
+\bibliographystyle{plain}
+
+\end{document}
