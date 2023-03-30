@@ -5,7 +5,7 @@ on:
       - main
       - master
 env:
-  LATEX_ROOT: thesis-main
+  LATEX_ROOT: index
 jobs:
   compile:
     runs-on: ubuntu-latest
