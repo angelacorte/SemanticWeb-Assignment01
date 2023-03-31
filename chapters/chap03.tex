@@ -4,9 +4,9 @@ Il progetto Interconnect ha l'obiettivo di introdurre concetti per l'interoperab
 
 
 \section{Ontologie Interconnect}
-Interconnect non è una singola ontologia, è una famiglia di ontologie che si basano sull'uso di ontologie già esistenti oltre a estendere SAREF e relative estensioni per l'energia.
+Interconnect non è una singola ontologia, è una famiglia di ontologie che si basano sull'uso di ontologie già esistenti (in particolare SAREF e relative estensioni per l'energia).
 Nella figura \ref{fig:panoramicaInterconnect} viene raffigurata una panoramica sulle ontologie create all'interno del progetto, mostrando le altre ontologie utilizzate ed estese. In particolare si può notare la famiglia SAREF di ETSI (SAREF e relative estensioni già trattate nel capitolo \ref{cap:panoramicaSaref}).
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/panoramicaInterconnect.png}
     \caption{Panoramica delle ontologie InterConnect in relazione a SAREF e ad altre ontologie esistenti.}
@@ -14,10 +14,31 @@ Nella figura \ref{fig:panoramicaInterconnect} viene raffigurata una panoramica s
 \end{figure}
 
 \subsection{Ontologie create nel progetto Interconnect}
+Nel progetto Interconnect sono state sviluppate nove ontologie. Vengono presentate nella tabella \ref{tab:ontologieCreate}
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{|X|X|X|}
+        \hline
+        Prefisso & Namespace                                                         & Concetti                                                                                            \\
+        \hline
+        ic-data  & \href{http://ontology.tno.nl/interconnect/datapoint\#}{link}      & Datapoint, TimeSeries, Message, Utility Purpose                                                     \\
+        ic-dev   & \href{http://ontology.tno.nl/interconnect/device\#}{link}         & Device, State, Function                                                                             \\
+        ic-flex  & \href{http://ontology.tno.nl/interconnect/flexibility\#}{link}    & Flex Offer, Flexibility Source, Control Type, Power Envelope                                        \\
+        ic-fc    & \href{http://ontology.tno.nl/interconnect/forecast\#}{link}       & Forecast, Point Forecast, Stochastic Forecast (Gaussian, Quantile, Trajectory), Gaussian Data Point \\
+        ic-inc   & \href{http://ontology.tno.nl/interconnect/incentivetable\#}{link} & Incentive Table, Incentive Tiers, Scope and Type                                                    \\
+        ic-pwlm  & \href{http://ontology.tno.nl/interconnect/powerlimit\#}{link}     & Power Limit (Nominal, Contractual and Failsafe)                                                     \\
+        ic-tplg  & \href{http://ontology.tno.nl/interconnect/topology\#}{link}       & Topological Location, Grid Segment, Market Segment, Regulation Zone, Electrical Phases              \\
+        ic-uom   & \href{http://ontology.tno.nl/interconnect/units\#}{link}          & Additional Units of Measure (not considered yet in SAREF)                                           \\
+        ic-user  & \href{http://ontology.tno.nl/interconnect/user\#}{link}           & User, User Profile, Preference, Priority, Interest, Activity, Time, Location                        \\
+        \hline
+    \end{tabularx}
+    \caption{Ontologie create all'interno del progetto Interconnect}
+    \label{tab:ontologieCreate}
+\end{table}
 
 \subsection{Ontologie utilizzate}
 L'utilizzo di altre ontologie è uno dei pilastri del web semantico. Nella tabella \ref{tab:ontologieUtilizzate} vengono elencate tutte le ontologie utilizzate nel progetto Interconnect, con relativo dettaglio sui concetti di tali librerie.
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
     \begin{tabularx}{\textwidth}{|X|X|X|}
         \hline
