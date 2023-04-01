@@ -77,6 +77,15 @@ Il Service Store non è altro che un'applicazione web dove è necessario registr
 L'obiettivo principale è quello di favorire lo sviluppo dell'ecosistema InterConnect, in cui fornitori e utilizzatori di servizi possano collaborare in modo più efficace. Questo sarà possibile grazie alla possibilità di registrare nuovi servizi interoperabili e di consultare quelli già esistenti, al fine di individuare quelli più adatti alle proprie esigenze e di ottenere tutte le informazioni necessarie per accedere e utilizzare correttamente i servizi selezionati. In questo modo, si creerà un punto di riferimento unico per tutti gli utenti dell'ecosistema InterConnect, con benefici in termini di semplificazione dell'accesso alle informazioni e miglioramento della qualità dei servizi offerti.
 
 
-\paragraph{Semantic Interoperability Layer}
+\paragraph{Semantic Interoperability Layer (SIL)}
+Il Semantic Interoperability Layer è il componente principale del framework. È responsabile dello scambio di conoscenza tra tutti i componenti e servizi interoperabili. 
+Il SIL è composto da più moduli, elencati di seguito:
+\begin{itemize}
+    \item knowdlege engine: responsabile dello scambio di dati tra I servizi;
+\item Generic adapter: il middleware che deve essere collegato ad ogni servizio per rendere il servizio interoperabile;
+\item Ontologie: vanno usate ontologie già esistenti (ad esempio saref) per definire uno standard per il dominio;
+\item Discovery: per mettere a disposizione i propri servizi e per vedere i servizi disponibili ad essere utilizzati;
+\end{itemize}
+
 
 \paragraph{P2P MarketPlace}
