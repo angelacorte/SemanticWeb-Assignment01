@@ -1,0 +1,67 @@
+% !TeX root = thesis-main.tex
+\usepackage[\thesislang]{babel}
+
+% common utilities
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsthm}
+\usepackage[\thesislang]{cleveref}
+\usepackage{listings}
+\usepackage{ifthen}
+
+% \usepackage[disable]{todonotes} % decommentare prima della versione finale
+\usepackage{todonotes} % commentare prima della versione finale
+\newcommand{\gcsidenote}[1]{\todo[size=\tiny,color=green]{\textbf{GC:} #1}}
+\newcommand{\gcnote}[1]{\todo[size=\scriptsize,color=green,inline]{\textbf{Giovanni Ciatto:} #1}}
+\newcommand{\dpsidenote}[1]{\todo[size=\tiny,color=red]{\textbf{DP:} #1}}
+\newcommand{\dpnote}[1]{\todo[size=\scriptsize,color=red,inline]{\textbf{Danilo Pianini:} #1}}
+\newcommand{\rcsidenote}[1]{\todo[size=\tiny,color=cyan]{\textbf{RC:} #1}}
+\newcommand{\rcnote}[1]{\todo[size=\scriptsize,color=cyan,inline]{\textbf{Roberta Calegari:} #1}}
+
+\newenvironment{abstract}{\chapter*{\centering\abstractname}\addcontentsline{toc}{chapter}{\abstractname}}{}
+
+\newenvironment{acknowledgements}{\chapter*{\acknowledgementsname}}{}
+
+\newenvironment{dedication}{\chapter*{}\begin{flushright}\itshape}{\normalfont\end{flushright}}
+
+\newcommand{\chapterWithoutNumber}[1]{\chapter*{#1}\addcontentsline{toc}{chapter}{#1}}
+
+%-----------------------------------------------------
+% LISTING CONFIGURATIONS
+%-----------------------------------------------------
+
+\Crefname{lstlisting}{Listing}{\lstlistingname}
+
+\lstset{
+    showstringspaces=false,
+    basicstyle=\ttfamily,
+    commentstyle={\color{olive}},
+    identifierstyle=\color{black},
+    ndkeywordstyle={\color{blue}},
+    stringstyle={\color{magenta}},
+    emphstyle={},
+    keywordstyle={\color{blue}},
+    breaklines=true,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    numbersep=10pt,
+    tabsize=2,
+    extendedchars=true,
+    frame=trBL,
+    frameround=fttt,
+}
+
+\lstdefinelanguage{Kotlin}{
+    comment=[l]{//},
+    emph={delegate, filter, first, firstOrNull, forEach, lazy, map, mapNotNull, println, return@},
+    keywords={abstract, actual, as, as?, break, by, class, companion, continue, data, do, dynamic, else, enum, expect, false, final, for, fun, get, if, import, in, interface, internal, is, null, object, override, package, private, public, return, set, super, suspend, this, throw, true, try, typealias, val, var, vararg, when, where, while},
+    morecomment=[s]{/*}{*/},
+    morestring=[b]",
+    morestring=[s]{"""*}{*"""},
+    ndkeywords={@Deprecated, @JvmField, @JvmName, @JvmOverloads, @JvmStatic, @JvmSynthetic, Array, Byte, Double, Float, Int, Integer, Iterable, Long, Runnable, Short, String, Unit, it},
+    sensitive=true
+}

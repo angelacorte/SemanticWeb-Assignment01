@@ -48,13 +48,65 @@ utilizza ontologie per integrare conoscenze provenienti da diverse fonti e
 consentire l'esecuzione di studi e simulazioni).
 
 \subsection{Casi d'uso}
+In seguito verrà presentato qualche esempio di applicazione dell'ontologia
+OntoPowSys.
 
 \subsubsection{Optimal Power Flow}
+OntoPowSys è stata integrata nell'agente Optimal Power Flow (OPF) della
+piattaforma JPS, che consente di risolvere il problema dell'ottimizzazione
+della distribuzione di energia elettrica. Esso utilizza l'ontologia
+OntoPowSys per acquisire conoscenze sul sistema elettrico e fornire soluzioni
+ottimali al problema dell'OPF.
+
+Le informazioni vengono acquisite tramite query
+SPARQL sul grafo di conoscenza JPS e utilizzate per eseguire i modelli
+matematici. I risultati vengono aggiornati nel grafo di conoscenza e
+visualizzati tramite strumenti appositi.
 
 \subsubsection{Bio Diesel Plant Simulation}
+Nell'ambito della simulazione di una bio-raffineria, OntoPowSys viene
+utilizzata per la modellizzazione delle proprietà dei materiali coinvolti nei
+processi di produzione del biodiesel. Questi modelli vengono integrati nella
+piattaforma JPS, che utilizza web services e agenti specifici per eseguire
+simulazioni e analisi.
 
-\section{Energy Storage Systems ontology}
+In particolare, un agente di JPS viene utilizzato per lo
+studio delle interazioni tra le varie fasi del processo di produzione del
+biodiesel. Le informazioni raccolte dalla simulazione vengono utilizzate per
+aggiornare la conoscenza presente nella piattaforma JPS e per generare
+risultati visualizzabili tramite appositi strumenti.
+
+\section{Energy Storage Systems Ontology}
+L'Energy Storage Systems Ontology \cite{EnergyStorageSystemOntology} è
+un'ontologia, che dispone di 10 classi, sviluppata per
+rappresentare le conoscenze e le informazioni relative ai sistemi di accumulo
+dell'energia (ESS). Questa ontologia è un modulo del “Domain Analysis-Based
+Global Energy ontology” e si occupa di rappresentare dispositivi di accumulo di
+energia, come batterie o condensatori.
 
 \section{EMMO-based Ecosystem}
+EMMO (European Materials and Modelling Ontology) è un'ontologia sviluppata
+nell'ambito dell'omonimo progetto europeo, per la modellizzazione e la
+descrizione dei materiali e dei fenomeni fisici che ne governano il
+comportamento.
+
+EMMO-based ecosystem si riferisce all'ecosistema di ontologie che si basano su
+EMMO e che lo estendono per applicazioni specifiche. In particolare,
+l'obiettivo di EMMO-based ecosystem è quello di fornire un insieme di ontologie
+comuni e interoperabili per la descrizione di concetti e fenomeni nel dominio
+dei materiali e delle scienze dei materiali. Questo è importante perché, data
+la complessità dei materiali e dei fenomeni fisici coinvolti, è necessario
+avere una rappresentazione univoca e standardizzata per garantire una corretta
+comunicazione tra i ricercatori, per condividere e riutilizzare dati e
+informazioni, e per supportare lo sviluppo di nuovi strumenti e tecnologie.
+
+L'EMMO-based ecosystem comprende una serie di ontologie specifiche che
+estendono EMMO, come ad esempio Thermodynamics Ontology per la descrizione dei
+fenomeni termodinamici, Electrochemistry Ontology per la descrizione dei
+fenomeni elettrochimici, e tante altre. Queste ontologie specifiche sono state
+sviluppate per soddisfare le esigenze dei diversi sottodomini all'interno del
+dominio dei materiali e delle scienze dei materiali. In questo modo, EMMO-based
+ecosystem offre un insieme completo di ontologie per rappresentare i concetti e
+i fenomeni nel dominio dei materiali in modo standardizzato e interoperabile.
 
 \section{Problematiche}
