@@ -90,11 +90,21 @@ L'obiettivo principale è quello di favorire lo sviluppo dell'ecosistema InterCo
 Il Semantic Interoperability Layer è il componente principale del framework. È responsabile dello scambio di conoscenza tra tutti i componenti e servizi interoperabili.
 Il SIL è composto da più moduli, elencati di seguito:
 \begin{itemize}
-    \item knowdlege engine: responsabile dello scambio di dati tra I servizi;
-    \item Generic adapter: il middleware che deve essere collegato a ogni servizio per rendere il servizio interoperabile;
-    \item Ontologie: vanno usate ontologie già esistenti (ad esempio saref) per definire uno standard per il dominio;
-    \item Discovery: per mettere a disposizione i propri servizi e per vedere i servizi disponibili a essere utilizzati;
+    \item knowledge engine: è il componente che gestisce la conoscenza semantica all'interno del sistema. Questo modulo si occupa di archiviare, gestire e interrogare le ontologie, i dati semantici e le regole di inferenza del sistema;
+    \item Generic adapter: il suo compito principale è di mediare l'interazione tra le applicazioni e il sistema InterConnect, convertendo i dati tra i formati dei diversi sistemi e garantendo l'interoperabilità semantica tra di essi;
+    \item Ontologie: vanno usate ontologie già esistenti (ad esempio SAREF) per definire uno standard per il dominio;
+    \item Reasoning: si occupa di inferire nuove informazioni dai dati esistenti all'interno del sistema InterConnect;
+    \item Discovery: consente la scoperta di servizi e risorse all'interno del sistema InterConnect, migliorando così la collaborazione e lo scambio di informazioni tra organizzazioni diverse.
+\end{itemize}
+
+Oltre ai moduli principali di cui abbiamo parlato, il Semantic Interoperability Layer di InterConnect include anche altri strumenti che possono supportare la creazione e la gestione di un sistema interoperabile:
+\begin{itemize}
+    \item SSA Test Tool: permette di verificare se i servizi semantici implementati seguono correttamente gli standard e le best practice definiti dall'architettura SSA. Lo strumento permette di eseguire test di interoperabilità, di conformità ai requisiti e di performance sui servizi semantici, generando report dettagliati sull'esito dei test;
+    \item Graph Pattern Visualizer: strumento che consente di visualizzare graficamente i graph pattern. Grazie alla rappresentazione visuale, è possibile verificare loop o altre inconsistenze tra soggetti, predicati e oggetti del grafo;
+    \item Graph Pattern Syntax Checker: strumento che permette l'individuazione degli errori di sintassi nei graph pattern, in modo rapido ed efficiente.
 \end{itemize}
 
 
+
 \paragraph{P2P MarketPlace}
+Il P2P MarketPlace di InterConnect si basa sul progetto blockchain open source Hyperledger e permette la creazione di casi d'uso decentralizzati pur continuando a utilizzare l'InterConnect Interoperability Framework.
