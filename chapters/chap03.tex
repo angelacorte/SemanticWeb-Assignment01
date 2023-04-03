@@ -63,6 +63,14 @@ L'utilizzo di altre ontologie è uno dei pilastri del web semantico. Nella tabel
 \section{InterConnect Interoperability Framework}
 La parte interessante di questo progetto è l'Interoperability Framework che viene fornito.
 Questo Interoperability Framework è capace di colmare le lacune di interoperabilità all'interno e tra i domini dell'energia e dell'IoT.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/architetturaFrameworkInterconnect.png}
+    \caption{Architettura di alto livello dell'InterConnect Interoperability Framework.}
+    \label{fig:architetturaFrameworkInterconnect}
+\end{figure}
+
 Di seguito vengono elencati i tre componenti principali del Framework:
 \begin{itemize}
     \item InterConnect Service Store;
@@ -78,13 +86,13 @@ L'obiettivo principale è quello di favorire lo sviluppo dell'ecosistema InterCo
 
 
 \paragraph{Semantic Interoperability Layer (SIL)}
-Il Semantic Interoperability Layer è il componente principale del framework. È responsabile dello scambio di conoscenza tra tutti i componenti e servizi interoperabili. 
+Il Semantic Interoperability Layer è il componente principale del framework. È responsabile dello scambio di conoscenza tra tutti i componenti e servizi interoperabili.
 Il SIL è composto da più moduli, elencati di seguito:
 \begin{itemize}
     \item knowdlege engine: responsabile dello scambio di dati tra I servizi;
-\item Generic adapter: il middleware che deve essere collegato ad ogni servizio per rendere il servizio interoperabile;
-\item Ontologie: vanno usate ontologie già esistenti (ad esempio saref) per definire uno standard per il dominio;
-\item Discovery: per mettere a disposizione i propri servizi e per vedere i servizi disponibili ad essere utilizzati;
+    \item Generic adapter: il middleware che deve essere collegato a ogni servizio per rendere il servizio interoperabile;
+    \item Ontologie: vanno usate ontologie già esistenti (ad esempio saref) per definire uno standard per il dominio;
+    \item Discovery: per mettere a disposizione i propri servizi e per vedere i servizi disponibili a essere utilizzati;
 \end{itemize}
 
 
