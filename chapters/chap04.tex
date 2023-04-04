@@ -20,16 +20,13 @@ tra cui: \textit{OntoPowSys}, \textit{Energy Storage Systems Ontology},
 \textit{Open Energy Ontology} e l'ecosistema basato su \textit{EMMO}.
 
 \section{OntoPowSys}
-OntoPowSys è un'ontologia del dominio dei sistemi di alimentazione, che è stata
+OntoPowSys \cite{OntoPowSys} è un'ontologia del dominio dei sistemi di
+alimentazione, che è stata
 sviluppata con lo scopo di supportare l'analisi e la progettazione di sistemi
 di alimentazione elettrica, in particolare per applicazioni industriali e di
 produzione di energia rinnovabile.
 
-L'ontologia è stata sviluppata in OWL (Web Ontology Language) ed è stata
-progettata per essere modulare e scalabile, in modo da poter essere utilizzata
-in diverse applicazioni diagnostico/prognostiche.
-
-L'ontologia OntoPowSys si basa su una struttura a tre livelli, che comprende:
+Si basa su una struttura a tre livelli, che comprende:
 la descrizione dei componenti, la descrizione delle funzioni e la descrizione
 delle proprietà.
 
@@ -40,10 +37,9 @@ sistema. Inoltre, OntoPowSys è stato integrato con altre ontologie del dominio
 dell'energia, come la Open Energy Ontology, per creare una visione più completa
 e integrata del sistema energetico.
 
-OntoPowSys estende la gerarchia di classi e proprietà definita nel modulo di
-sistema di alimentazione elettrica di OntoEIP. Estende
-i concetti di supporto creando un framework per l'esecuzione di modelli
-matematici in JPS (Joint Processing System è un sistema informatico che
+Inoltre, estende i concetti di supporto creando un framework per l'esecuzione
+di modelli matematici in JPS (Joint Processing System è un sistema informatico
+che
 utilizza ontologie per integrare conoscenze provenienti da diverse fonti e
 consentire l'esecuzione di studi e simulazioni).
 
@@ -76,6 +72,99 @@ biodiesel. Le informazioni raccolte dalla simulazione vengono utilizzate per
 aggiornare la conoscenza presente nella piattaforma JPS e per generare
 risultati visualizzabili tramite appositi strumenti.
 
+\section{Open Energy Ontology}
+Open Energy Ontology \cite{OpenEnergyOntology} (OEO) è un'ontologia di dominio
+nel campo della
+modellizzazione dei sistemi energetici. Ha lo scopo di standardizzare la
+terminologia nel campo e di fornire una struttura logica per l'integrazione dei
+dati e l'aggregazione. L'ontologia può essere utilizzata anche per la creazione
+di modelli di acquisizione dei dati, la visualizzazione dei dati e l'estrazione
+di informazioni dal testo e dai dati.
+
+Gli obiettivi dell'Open Energy Ontology \cite{OEO} sono orientati alla
+crescente
+sofisticazione e interdipendenza della modellizzazione dei sistemi energetici.
+Ciò richiede una maggiore automazione delle interfacce tra modelli e una
+comprensione semantica dei dati.
+
+\subsection{Casi d'uso}
+In seguito verranno descritti casi d'uso provenienti dai progetti
+\textit{SzenarienDB}, \textit{LOD-GEOSS} e \textit{SIROP}.
+
+\subsubsection{Scenario description}
+Lo scopo era quello di creare un quadro che permettesse di collegare in modo
+più strutturato e trasparente i risultati di ricerche energetiche, le basi di
+dati utilizzate e le assunzioni implicite ed esplicite coinvolte.
+
+Da una raccolta di proprietà degli scenari e degli
+studi energetici che coprono le informazioni più importanti, proprietà inserite
+in un foglio di calcolo da cui è stato creato un
+grafo di conoscenza RDF, che utilizza
+le classi e le relazioni definite nella OEO sulla base di questi fogli di
+calcolo.
+
+La piattaforma Open Energy è stata estesa con una sezione aggiuntiva che
+consente agli utenti
+di visualizzare ed editare le informazioni memorizzate nel grafo di conoscenza.
+Questo permette ai ricercatori di rendere la loro ricerca più disponibile al
+pubblico e facilita una descrizione più strutturata del paesaggio di basi di
+dati, modelli energetici e risultati scientifici.
+
+\subsubsection{Data representation for the core energy market data register}
+Il registro centrale dei dati del mercato energetico (MaStR) pubblicato
+dall'Agenzia federale tedesca per le reti energetiche nel 2019 fornisce una
+lista completa di tutte le centrali registrate in Germania che si connettono
+alla rete. Tuttavia, l'API del MaStR è complessa e presenta limitazioni
+nell'accesso ai dati, come ad esempio il numero limitato di richieste
+giornaliere per utente.
+
+Per migliorare l'accessibilità ai dati, è stato
+sviluppato uno strumento open source per estrarre dati dal MaStR, arricchendoli
+con metadati e rendendoli disponibili sulla piattaforma Open Energy Platform,
+dove possono essere scaricati senza bisogno di registrazione.
+
+Con l'Ontology
+for Energy Systems (OEO) è possibile annotare il dataset MaStR e semplificare
+le query complesse attraverso una mappatura dell'API a un endpoint per il
+protocollo SPARQL che utilizza i termini definiti nell'ontologia. Ciò permette
+una maggiore facilità d'uso per la raccolta di dati complessi e l'arricchimento
+del dataset con dipendenze logiche.
+
+\subsubsection{Data annotation of an energy meteorological time series data
+    set}
+
+Questo caso d'uso tratta dell'annotazione di serie temporali meteorologiche
+energetiche utilizzate come
+dati di input o output in modelli di sistemi energetici. L'annotazione coerente
+e completa non è banale poiché esistono diverse modalità
+di descrizione delle serie temporali e le convenzioni di annotazione variano a
+seconda dei domini.
+
+L'OEO facilita questo processo fornendo definizioni concise e non ambigue per i
+diversi concetti di annotazione. Ciò consente alla struttura e al contenuto
+delle serie temporali meteorologiche energetiche e di altre discipline di
+essere descritte completamente e identificate senza sforzo interdisciplinare.
+
+\subsubsection{Interface homogenization of the FINE energy system model
+    framework}
+
+Utilizzando l'OEO, si vuole omogeneizzare l'annotazione all'interno di un
+database distribuito di inventari di dati e parametri funzionali attesi o
+forniti dalle interfacce dei modelli.
+Si riduce l'eterogeneità delle descrizioni delle interfacce e si minimizza lo
+sforzo dei programmatori e
+degli utenti per produrle e comprenderle.
+
+Sulla base della descrizione dell'interfaccia attualmente esistente in cui i
+singoli parametri di funzione sono denominati e definiti, si sta attualmente
+esplorando in che misura esiste già una copertura con la terminologia dell'OEO
+e in che punti è necessario adattare l'interfaccia o l'ontologia. Utilizzando
+queste applicazioni specifiche del modello, si mira a sviluppare le migliori
+pratiche che possono essere utilizzate per omogeneizzare la connessione dei
+dati ai modelli e, alla fine, lo scambio di dati tra i modelli stessi e per
+promuovere lo scambio scientifico all'interno della comunità internazionale del
+sistema energetico.
+
 \section{Energy Storage Systems Ontology}
 L'Energy Storage Systems Ontology \cite{EnergyStorageSystemOntology} è
 un'ontologia, che dispone di 10 classi, sviluppata per
@@ -85,28 +174,62 @@ Global Energy ontology” e si occupa di rappresentare dispositivi di accumulo d
 energia, come batterie o condensatori.
 
 \section{EMMO-based Ecosystem}
-EMMO (European Materials and Modelling Ontology) è un'ontologia sviluppata
-nell'ambito dell'omonimo progetto europeo, per la modellizzazione e la
-descrizione dei materiali e dei fenomeni fisici che ne governano il
-comportamento.
+Elementary Multiperspective Material Ontology (EMMO) \cite{emmo} è un
+framework ontologico per le
+scienze applicate e l'ingegneria. È stato progettato per soddisfare le esigenze
+di una descrizione semantica profondamente radicata nelle scienze fisiche,
+incorporando la descrizione dei materiali da una rigorosa prospettiva fisica,
+le relazioni formali tra livelli di granularità per facilitare la descrizione
+di materiali multi-scala e la definizione di processi materiali per catturare
+il cambiamento ed evoluzione dei materiali come catena di diversi stati.
 
-EMMO-based ecosystem si riferisce all'ecosistema di ontologie che si basano su
-EMMO e che lo estendono per applicazioni specifiche. In particolare,
-l'obiettivo di EMMO-based ecosystem è quello di fornire un insieme di ontologie
-comuni e interoperabili per la descrizione di concetti e fenomeni nel dominio
-dei materiali e delle scienze dei materiali. Questo è importante perché, data
-la complessità dei materiali e dei fenomeni fisici coinvolti, è necessario
-avere una rappresentazione univoca e standardizzata per garantire una corretta
-comunicazione tra i ricercatori, per condividere e riutilizzare dati e
-informazioni, e per supportare lo sviluppo di nuovi strumenti e tecnologie.
+Attualmente definisce quattro prospettive:
+\begin{itemize}
+    \item \textbf{Riduzionistica}: introduce una relazione di
+          parzialità diretta non transitiva.
+    \item \textbf{Fisicalistica}: categorizza il mondo
+          secondo la fisica applicata.
+    \item \textbf{Percettuale}: categorizza gli oggetti del mondo reale in base
+          a come sono percepiti dall'utente come modello riconoscibile nello
+          spazio o nel tempo.
+    \item \textbf{Olistica}: si occupa dei processi che si svolgono nel tempo e
+          del ruolo dei diversi partecipanti al processo. Uno di questi
+          processi è
+          chiamato semiosi. In una semiosi un interprete collega un oggetto ad
+          un segno
+          che gli dà significato.
+\end{itemize}
 
-L'EMMO-based ecosystem comprende una serie di ontologie specifiche che
-estendono EMMO, come ad esempio Thermodynamics Ontology per la descrizione dei
-fenomeni termodinamici, Electrochemistry Ontology per la descrizione dei
-fenomeni elettrochimici, e tante altre. Queste ontologie specifiche sono state
-sviluppate per soddisfare le esigenze dei diversi sottodomini all'interno del
-dominio dei materiali e delle scienze dei materiali. In questo modo, EMMO-based
-ecosystem offre un insieme completo di ontologie per rappresentare i concetti e
-i fenomeni nel dominio dei materiali in modo standardizzato e interoperabile.
+Lo sviluppo e l'uso di EMMO è supportato dal Consiglio europeo per la
+modellizzazione dei materiali (EMMC), che mira ad avvicinare la modellizzazione
+dei materiali alle esigenze dell'industria. Uno dei principali obiettivi
+dell'EMMC è di facilitare l'interoperabilità dei dati e dei modelli tra diversi
+domini tecnici. Questo viene fatto attraverso l'istituzione di schemi di
+metadati comuni e roadmap, che possono essere utilizzati come guida per le
+ontologie di dominio EMMO.
+
+\subsection{Caso d'uso}
+
+\subsubsection{BattINFO}
+BattINFO \cite{emmo} è un'ontologia di dominio per le celle batteria, i
+componenti, i materiali e le loro interfacce, sviluppata per supportare
+l'interoperabilità dei dati e i flussi di lavoro di intelligenza artificiale.
+BattINFO si basa sull'ontologia EMMO e include un'ontologia di elettrochimica
+come base fondamentale. Le classi di quest'ontologia si basano sulle
+raccomandazioni
+dell'International Union of Pure and Applied Chemistry (IUPAC) e della
+International Electrotechnical Commission (IEC). L'ontologia fornisce anche
+annotazioni per definire le etichette preferite per l'entità "Battery", oltre a
+collegamenti alle voci di Wikipedia e dbpedia.
 
 \section{Problematiche}
+La problematica principale dell'esistenza di tutte queste ontologie è che non
+sono correlate le une con le altre.
+
+Le ontologie sopra elencate non sono allineate con SAREF, ciò comporta la
+limitazione della riusabilità all'interno delle iniziative basate su SAREF e
+viceversa.
+
+Sarebbe consono a riguardo scegliere di adottare uno standard comune a tutti i
+progetti inerenti a questi ambiti, in maniera tale da favorirne la comprensione
+e il riutilizzo, nonchè la manutenibilità nel tempo.
